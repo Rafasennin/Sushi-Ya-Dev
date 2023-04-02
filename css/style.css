@@ -1,0 +1,41 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orienta&display=swap');
+
+:root{
+    --font-oriental:'Orienta', sans-serif;  
+}
+
+body{
+    text-align: center;
+    font-size: var(--font-oriental);
+}
+
+.header__box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 1200px;
+    height: 200px;
+    background-color: white;
+    border: 1px solide  transparent;
+    border-radius: 15px;
+    position: absolute; 
+    left: 180px;
+    top: 170px;
+    z-index: 1;
+    box-shadow: 5px 5px 10px 5px;
+}
+
+.main__title{
+    font-size: 48px;
+}
+.template_img{
+    width: 100vw;
+    height: 40vh;
+}
+
+.header__main{
+}
+
+
