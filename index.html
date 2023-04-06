@@ -18,10 +18,26 @@
             <div class="header__box" id="header__box">
                 <h1 class="main__title">Sushi-ya Dev</h1>
 
-            </div>
-        </header>
-        
+                <div id="header__info__box" class="header__info__box">
+                    <p id="header__info time__info">{{time.datetime}}</p>
+                    <p id="header__info deliver__info">{{delivery}}</p>
+                    <p id="header__info status__info"><span :class="color">&nbsp;</span> {{status}}</p>
+                </div>
+            </div> 
+        </header> 
 
+        <section class="main__box">
+                <div class="card__box card__1">card1</div>
+                <div class="card__box card__2">card2</div>
+                <div class="card__box card__3">card3</div>
+                <div class="card__box card__4">card4</div>
+        </section>
+
+        <section class="purchase__car">
+            <div class="card__box carrinho">carrinho </div>
+        </section>
+        
+        
         <script src="js/main.js"></script>
     </body>
-</html>
+</html> 
