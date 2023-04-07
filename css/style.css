@@ -83,8 +83,9 @@ body{
 
 .card__box{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    flex-direction: column;
     text-align: center;
     background-color: white;
     border: 1px solide  transparent;
@@ -100,8 +101,20 @@ body{
 .carrinho{
     position: relative;
     bottom: 695px;
-    left: 1080px;
+    left: 1075px;
     width:300px;
 }
 
+.img__card{
+    width:180px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    margin-top: 1em;
+}
+
+.generalText{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 1em;
+}
 
