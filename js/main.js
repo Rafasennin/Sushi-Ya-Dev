@@ -7,6 +7,7 @@ const vm = new Vue({
             status: "Aberto",
             color:"color",
             recipe:"Hossomaki Skin Head",
+            
         },
 
         methods: {
@@ -15,28 +16,43 @@ const vm = new Vue({
                 .then(response => response.json())
                 .then(json=>{
                     this.time = json;
-                    console.log(json);
+                    console.log(json.datetime);
                 })
-            },
-
-            fetchRecipes(){
-                fetch("https://api.spoonacular.com/recipes/informationBulk")
-                .then(response => response.json())
-                .then(jsonRecipe=>{
-                    this.recipe = jsonRecipe;
-                    console.log(jsonRecipe);
-                })   
             }
         }
 })
 
 
+
 const vm2 = new Vue({
     el:".main__box",
     data:{
-        recipe:"Hossomaki Skin Head",
-        generalText: "generalText"
+        hossomaki:{
+            recipe:"Hossomaki Skin Head",
+            price: 15
+        },
+        
+        generalText: "generalText",
+        counter: 0,
+        total: 0
     },
+
+    methods:{
+        increment(){
+            if(this.counter >= 0){
+            this.counter++
+            this.total+= this.hossomaki.price
+            }
+        },
+
+        decrement(){
+            if(this.counter > 0){
+            this.counter--;
+            this.total-= this.hossomaki.price
+            
+            }
+        }
+    }
 
 })
 

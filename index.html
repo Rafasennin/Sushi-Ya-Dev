@@ -5,9 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sushi-ya Dev</title>
-        <script src="js/vue.js"></script>
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
+        <script src="js/vue.js"></script>
+        <script src="https://kit.fontawesome.com/6d369afe1a.js" crossorigin="anonymous"></script>
     </head>
 
     <body> 
@@ -30,7 +31,11 @@
         <section class="main__box">
                 <div class="card__box card__1">
                     <img class="img__card img__card2" src="/Sushi-ya-dev/Sushi-Ya-Dev/img/hossomaki-head-fish.jpg" alt="Sushi roll">
-                    <p :class="generalText">{{recipe}}</p>
+                    <p :class="generalText" v-for="value in hossomaki">{{value}}</p>
+                    <div class="addRemove">
+                        <button class="buttonAddRemove" @click="increment">+</button>
+                        <button class="buttonAddRemove" @click="decrement">-</button>
+                    </div>
                 </div>
                 <div class="card__box card__2">
                     <img class="img__card img__card2" src="/Sushi-ya-dev/Sushi-Ya-Dev/img/hossomaki-head-fish.jpg" alt="Sushi roll">
@@ -44,15 +49,20 @@
                     <img class="img__card img__card2" src="/Sushi-ya-dev/Sushi-Ya-Dev/img/hossomaki-head-fish.jpg" alt="Sushi roll">
                     <p :class="generalText">{{recipe}}</p>
                 </div>
-        </section>
+        
 
-        <section class="purchase__car">
-            <div class="card__box carrinho">carrinho </div>
-        </section>
+        <div class="purchase__cart">
+                <i class="fa-solid fa-cart-shopping" id="cart__icon__bag"> Carrinho {{counter}}</i>
+                <p class="cart__text subtotal">Subotal: </p> 
+                <p class="cart__text total">Total: </p>  
+                <span class="cart__text span">R$ {{total}}</span> 
+                <button class="cart__button">
+                    <i class="fa-solid fa-cart-shopping" id="cart__icon__cart"></i>
+                    <p class="cart__text" id="icon__cart">Ver sacola </p> 
+                </button>
+        </div>
 
-        
-        
-        
+    </section>
         <script src="js/main.js"></script>
     </body>
 </html> 

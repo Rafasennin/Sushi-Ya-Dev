@@ -98,12 +98,73 @@ body{
     bottom: 100px;
 }
 
-.carrinho{
-    position: relative;
-    bottom: 695px;
-    left: 1075px;
+.purchase__cart{
+    background-color: white;
+    border: 1px solide  transparent;
+    border-radius: 15px;
+    border: 2px solid lightgray;
+    box-shadow: 2px 2px 5px 2px;
+    position: absolute;
     width:300px;
+    height: 300px;
+    bottom: 230px;
+    left: 940px;
+    display: grid;
+    grid-template-rows: auto repeat(4);
+    grid-template-columns: 1fr 1fr;
+}   
+
+#cart__icon__bag{
+    margin: 1em;
+    text-align: left;
+    grid-column: span 2
 }
+
+.cart__button{
+    grid-row: 4;
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-around;
+    width: 250px;
+    height: 50px;
+    background-color: rgb(187, 85, 85);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: large;
+    margin: 1em auto 0 auto;
+}
+
+.cart__button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 1000ms;
+}
+
+#cart__icon__cart, #icon__cart{
+    padding: 1em;
+    text-align: center;
+    margin-right: 1.5em;
+}
+
+.subtotal{
+    grid-row: 2;
+    text-align: left;
+    margin-left: 2em;
+    grid-column: span 2
+}
+
+.total, .span{
+    grid-row: 3;
+    grid-column: 1;
+    text-align: left;
+    margin-left: 2em;
+}
+
+.span{
+    grid-column: 2;
+}
+
 
 .img__card{
     width:180px;
@@ -116,5 +177,13 @@ body{
     font-size: 18px;
     font-weight: bold;
     margin-top: 1em;
+}
+
+.addRemove{
+    margin-top: 3em;
+}
+
+.buttonAddRemove:hover{
+    cursor: pointer;
 }
 
